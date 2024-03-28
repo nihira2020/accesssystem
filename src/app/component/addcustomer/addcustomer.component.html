@@ -1,0 +1,37 @@
+<form [formGroup]="customerform" (ngSubmit)="Save()">
+    <mat-card>
+        <mat-card-header>
+           <h1>{{title}}</h1>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field >
+            <mat-label>Code</mat-label>
+            <input formControlName="code" matInput [disabled]="isedit">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput>
+          </mat-form-field>
+          <mat-form-field >
+            <mat-label>Phone</mat-label>
+            <input formControlName="phone" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>CreditLimit</mat-label>
+            <input formControlName="creditlimit" matInput/>
+          </mat-form-field>
+         
+          <div class="div-50">
+            <mat-checkbox formControlName="status">Is Active</mat-checkbox>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit">Save</button>
+            <a (click)="ClosePopup()" mat-raised-button color="accent" >Close</a>
+        </mat-card-actions>
+    </mat-card>
+    </form>

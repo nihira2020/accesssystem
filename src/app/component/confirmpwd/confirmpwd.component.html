@@ -1,0 +1,23 @@
+<!-- <form > -->
+<mat-card>
+    <mat-card-header>
+        <h1>OTP Verification</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label>OTP Text</mat-label>
+            <input matInput [(ngModel)]="otptext">
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="div-50" style="align-items: center;">
+            <button type="submit" color="primary" mat-raised-button (click)="submitotp()">Confirm</button>
+        </div>
+        <div class="div-50">
+            <a color="accent" mat-raised-button routerLink="/register">Cancel</a>
+        </div>
+    </mat-card-actions>
+
+
+</mat-card>
+<!-- </form> -->
